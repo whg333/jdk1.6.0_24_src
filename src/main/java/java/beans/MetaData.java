@@ -1362,7 +1362,7 @@ class MetaData {
     }
 
     private static String[] getAnnotationValue(Constructor constructor) {
-        ConstructorProperties annotation = constructor.getAnnotation(ConstructorProperties.class);
+        ConstructorProperties annotation = (ConstructorProperties)constructor.getAnnotation(ConstructorProperties.class);
         return (annotation != null)
                 ? annotation.value()
                 : null;
